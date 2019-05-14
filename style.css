@@ -8,6 +8,7 @@
 
 body {
   font-family: 'EB Garamond', serif;
+  overflow:hidden;
 }
 
 p {
@@ -20,18 +21,20 @@ p {
   width:100vw;
   background-image: url("assets/mapBlanc.png");
   background-repeat: no-repeat;
-  background-position: 95% 80%;
-  background-size: 50%;
+  background-position: 100% 100%;
+  background-size: 60%;
   background-color: #F9E998;
   display:block;
 }
 
 #main {
   position:absolute;
-  top:10vh;
+  top:13vh;
+  margin:20px;
   left:0;
-  height:90%;
-  border-style:solid;
+  height:85%;
+  width:97%;
+
 }
 
 nav {
@@ -49,6 +52,7 @@ nav ul li {
 }
 nav ul li:first-child {
   float: left;
+  padding-left:20px;
 }
 
 a {
@@ -63,4 +67,9 @@ button {
   text-align: left;
   text-decoration: none;
   font-size: 16px;
+}
+
+#descriptionProjet p {
+  padding:20px;
+  width:15vw;
 }
