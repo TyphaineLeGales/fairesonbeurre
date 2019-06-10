@@ -8,11 +8,11 @@ function toggle () {
   if(document.getElementById("toggleButton").checked == true) {
     document.getElementById('wrapper').style.backgroundColor = "#E5E9DD";
     document.getElementById('legende').style.display = "block";
-    document.getElementById('video').style.display = "none";
+    document.getElementById('podcast').style.display = "none";
   } else {
     document.getElementById('wrapper').style.backgroundColor = "#E5E9DD";
     document.getElementById('legende').style.display = "none";
-    document.getElementById('video').style.display = "block";
+    document.getElementById('podcast').style.display = "block";
   }
 }
 

@@ -23,7 +23,7 @@ p {
   display:block;
 }
 
-#main {
+.main {
   position:absolute;
   top:13vh;
   margin:20px;
@@ -170,12 +170,12 @@ input:checked + .slider:before {
   padding:20px;
 }
 
-#video {
+#podcast{
   position:fixed;
-  top:30vh;
+  top:35vh;
   left:10vw;
-  max-width:17vw;
   text-align: center;
+  width:20vw;
 }
 }
 
@@ -185,6 +185,25 @@ svg {
 }
 
 video {
-  margin: 0;
-  padding: 0;
+  width:30vw;
+  height:40vh;
+
+}
+
+#gallerie {
+  margin-top:10vh;
+}
+
+#gallerie li {
+  width:auto;
+  list-style-type:none;
+  white-space:nowrap;
+  overflow-x:auto;
+  overflow-y: hidden;
+  margin-top:10px;
+}
+
+.listImages {
+height:300px;
+ margin: 10px;
 }
