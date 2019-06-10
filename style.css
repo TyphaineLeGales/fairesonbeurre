@@ -8,13 +8,16 @@
 
 body {
   font-family: 'Roboto', sans-serif;
-  overflow:hidden;
+  /*overflow:hidden;*/
 }
 
 p {
   color:black;
 }
 
+button {
+  background:none;
+}
 #wrapper {
   position:relative;
   height:100vh;
@@ -33,22 +36,38 @@ p {
 
 }
 
-nav {
+/*nav {
   position:absolute;
   top:0;
   left:0;
   width:100%;
   background-color: white;
-}
+}*/
 
-nav ul li {
+/*nav ul li {
   list-style:none;
-  margin:30px;
+  margin:10px;
   float: right;
-}
-nav ul li:first-child {
+}*/
+/*nav ul li:first-child {
   float: left;
   padding-left:20px;
+}*/
+
+#menu {
+  width:10vw;
+  margin-left:20px;
+  padding:10px;
+  position:fixed;
+  top:0;
+}
+
+#menu li {
+ list-style:none;
+}
+
+#menu li a {
+  margin-right:12px;
 }
 
 a {
@@ -56,6 +75,9 @@ a {
   color:black;
 }
 
+a:hover {
+  text-decoration: underline;
+}
 .point:hover {
   cursor:pointer;
 }
@@ -172,8 +194,8 @@ input:checked + .slider:before {
 
 #podcast{
   position:fixed;
-  top:35vh;
-  left:10vw;
+  top:45vh;
+  left:8vw;
   text-align: center;
   width:20vw;
 }
