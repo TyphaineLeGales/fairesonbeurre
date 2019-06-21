@@ -3,12 +3,12 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 function interactiveMap() {
-  var mx = document.getElementById('MichelXavier');
-  var yv = document.getElementById('YvonJean');
-  var el = document.getElementById('ErwanLaurence');
-  var yvv = document.getElementById('YvesVeronique');
-  var vc = document.getElementById('VincentCeline');
-  var mb = document.getElementById('MarionBenjamin');
+  var mx = document.getElementById('pointMichel');
+  var yv = document.getElementById('pointYvon');
+  var el = document.getElementById('pointErwan');
+  var yvv = document.getElementById('pointYves');
+  var vc = document.getElementById('pointCeline');
+  var mb = document.getElementById('pointMarion');
 
   var pm = document.getElementById('PMichel');
   var pYvon = document.getElementById('PYvon');
@@ -17,52 +17,129 @@ function interactiveMap() {
   var pYves= document.getElementById('PYves');
   var pe= document.getElementById('PErwan');
 
+  var nMi = document.getElementsByClassName('network Michel');
+  var nYvo = document.getElementsByClassName('network Yvon');
+  var nYve = document.getElementsByClassName('network Yves');
+  var nM = document.getElementsByClassName('network Marion');
+  var nC = document.getElementsByClassName('network Celine');
+  var nE= document.getElementsByClassName('network Erwan');
+
 
   mx.addEventListener('mouseover', function() {
     document.getElementById("nom").textContent = 'Michel & Xavier';
     pm.style.display="block";
     invisible([pYvon, pc, pmarion, pYves, pe]);
+    iNetwork(nYvo);
+    iNetwork(nYve);
+    iNetwork(nC);
+    iNetwork(nE);
+    iNetwork(nM);
+
+  });
+  mx.addEventListener('click', function() {
+    for(var i=0; i<nMi.length; i++) {
+      nMi[i].style.opacity="1";
+    }
   });
 
   yv.addEventListener('mouseover', function() {
     document.getElementById("nom").textContent = 'Yvon & Jean';
-    invisible([pm, pc, pmarion, pYves, pe]);
     pYvon.style.display="block";
-
+    invisible([pm, pc, pmarion, pYves, pe]);
+    iNetwork(nMi);
+    iNetwork(nYve);
+    iNetwork(nC);
+    iNetwork(nE);
+    iNetwork(nM);
+  });
+   yv.addEventListener('click', function() {
+    for(var i=0; i<nYvo.length; i++) {
+      nYvo[i].style.opacity="1";
+    }
   });
 
   el.addEventListener('mouseover', function() {
     document.getElementById("nom").textContent = 'Erwan & Laurence';
-    invisible([pm, pc, pmarion, pYves, pYvon]);
     pe.style.display="block";
+    invisible([pm, pc, pmarion, pYves, pYvon]);
+    iNetwork(nMi);
+    iNetwork(nYve);
+    iNetwork(nC);
+    iNetwork(nYvo);
+    iNetwork(nM);
 
+  });
+  el.addEventListener('click', function() {
+    for(var i=0; i<nE.length; i++) {
+      nE[i].style.opacity="1";
+    }
   });
 
   yvv.addEventListener('mouseover', function() {
     document.getElementById("nom").textContent = 'Yves & Veronique';
-     invisible([pm, pc, pmarion, pe, pYvon]);
     pYves.style.display="block";
+     invisible([pm, pc, pmarion, pe, pYvon]);
+    iNetwork(nMi);
+    iNetwork(nE);
+    iNetwork(nC);
+    iNetwork(nYvo);
+    iNetwork(nM);
 
   });
 
-  vc.addEventListener('mouseover', function() {
-    document.getElementById("nom").textContent = 'Vincent & Celine';
-    invisible([pm, pYves, pmarion, pe, pYvon]);
-     pc.style.display="block";
-
+   yvv.addEventListener('click', function() {
+    for(var i=0; i<nYve.length; i++) {
+      nYve[i].style.opacity="1";
+    }
   });
 
   mb.addEventListener('mouseover', function() {
     document.getElementById("nom").textContent = 'Marion & Benjamin';
-     invisible([pc, pYves, pmarion, pe, pYvon]);
-    pmarion.style.display="block";
+     pmarion.style.display="block";
+    invisible([pc, pYves, pm, pe, pYvon]);
+    iNetwork(nMi);
+    iNetwork(nE);
+    iNetwork(nC);
+    iNetwork(nYvo);
+    iNetwork(nYve);
+  });
 
+   mb.addEventListener('click', function() {
+    for(var i=0; i<nM.length; i++) {
+      nM[i].style.opacity="1";
+    }
+  });
+
+  vc.addEventListener('mouseover', function() {
+    document.getElementById("nom").textContent = 'Vincent & Celine';
+    pc.style.display="block";
+     invisible([pm, pYves, pmarion, pe, pYvon]);
+      iNetwork(nMi);
+    iNetwork(nE);
+    iNetwork(nM);
+    iNetwork(nYvo);
+    iNetwork(nYve);
+  });
+
+   vc.addEventListener('click', function() {
+    for(var i=0; i<nC.length; i++) {
+      nC[i].style.opacity="1";
+    }
   });
 
 }
 
 function invisible (params){
-  for (i=0; i<params.length; i++) {
+  for (var i=0; i<params.length; i++) {
     params[i].style.display="none";
   }
 }
+
+function iNetwork (params){
+  for (var i=0; i<params.length; i++) {
+    params[i].style.opacity="0";
+  }
+}
+
+
+

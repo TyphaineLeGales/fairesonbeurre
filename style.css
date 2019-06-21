@@ -9,6 +9,7 @@
 body {
   font-family: 'Roboto', sans-serif;
   overflow:hidden;
+   background-color:#4D5450;
 }
 
 p {
@@ -23,7 +24,7 @@ button {
   height:100vh;
   width:100vw;
   display:block;
-  background-color:#4D5450;
+
 }
 
 .main {
@@ -107,6 +108,7 @@ button {
 
 
 #map{
+  margin-right:-2vw;
 }
 
 #menu {
@@ -244,4 +246,12 @@ height:300px;
   font-size:1.2em;
   padding:5px;
   opacity:0;
+}
+
+.network {
+  opacity:0;
+}
+
+text {
+  font-family :'Roboto', sans-serif;
 }
