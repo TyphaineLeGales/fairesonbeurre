@@ -9,7 +9,7 @@
 body {
   font-family: 'Roboto', sans-serif;
   overflow:hidden;
-   background-color:#4D5450;
+  background-color:#4D5450;
 }
 
 p {
@@ -183,7 +183,7 @@ input:checked + .slider:before {
 #nom {
   position:fixed;
   top:15vh;
-  left:40vw;
+  left:45vw;
   right:auto;
   font-size:1.5em;
   font-weight:lighter;
@@ -209,8 +209,8 @@ input:checked + .slider:before {
 
 #podcast{
   position:fixed;
-  top:45vh;
-  left:8vw;
+  top:40vh;
+  left:2vw;
   text-align: center;
   width:20vw;
 }
@@ -218,7 +218,7 @@ input:checked + .slider:before {
 
 video {
   width:30vw;
-  height:40vh;
+  height:35vh;
   /*opacity:0;*/
 
 }
