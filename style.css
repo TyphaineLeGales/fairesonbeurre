@@ -8,7 +8,7 @@
 
 body {
   font-family: 'Roboto', sans-serif;
-  /*overflow:hidden;*/
+  overflow:hidden;
 }
 
 p {
@@ -22,8 +22,8 @@ button {
   position:relative;
   height:100vh;
   width:100vw;
-  background-color: #E5E9DD;
   display:block;
+  background-color:#4D5450;
 }
 
 .main {
@@ -54,20 +54,22 @@ button {
   padding-left:20px;
 }*/
 
-#menu {
+.menu {
   width:10vw;
-  margin-left:20px;
+  /*margin-left:10px;*/
   padding:10px;
   position:fixed;
   top:0;
 }
 
-#menu li {
+.menu li {
  list-style:none;
+ color:#E5E9DD;
 }
 
-#menu li a {
+.menu li a {
   margin-right:12px;
+  color:#E5E9DD;
 }
 
 a {
@@ -95,12 +97,20 @@ button {
   padding:20px;
   width:15vw;
   position:fixed;
-  background-color:#ECEFE6;
+  /*background-color:#ECEFE6;*/
 }
 
-#map {
-  top:-2em;
-  right:-3em;
+#descriptionProjet {
+  margin-top:20vh;
+}
+
+
+
+#map{
+}
+
+#menu {
+  color:white;
 }
 
 .switch {
@@ -162,35 +172,38 @@ input:checked + .slider:before {
 
 #box {
   position:fixed;
-  bottom:7vh;
+  bottom:2vh;
   left:42vw;
   transform:scale(0.6);
 }
 
+
 #nom {
   position:fixed;
-  top:17vh;
+  top:15vh;
   left:40vw;
   right:auto;
-  font-size:1.3em;
+  font-size:1.5em;
   font-weight:lighter;
+  color:#E5E9DD;
 }
 
 #legende {
   position:fixed;
-  top:30vh;
+  top:35vh;
   left:15vw;
   max-width:15vw;
   text-align: center;
-}
-
-#legende {
   font-weight:lighter;
   font-size:0.8em;
+  /*opacity:0;*/
 }
+
 #legende img {
   padding:20px;
+  display:none;
 }
+
 
 #podcast{
   position:fixed;
@@ -199,16 +212,12 @@ input:checked + .slider:before {
   text-align: center;
   width:20vw;
 }
-}
 
-svg {
-  margin-right:-20px;
-  margin-top:-20px;
-}
 
 video {
   width:30vw;
   height:40vh;
+  /*opacity:0;*/
 
 }
 
@@ -228,4 +237,11 @@ video {
 .listImages {
 height:300px;
  margin: 10px;
+}
+
+#goToSlider {
+  color: #E5E9DD;
+  font-size:1.2em;
+  padding:5px;
+  opacity:0;
 }
