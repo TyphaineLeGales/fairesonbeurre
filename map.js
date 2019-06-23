@@ -35,6 +35,7 @@ function interactiveMap() {
     vm.style.display="block";
     invisible([pYvon, pc, pmarion, pYves, pe]);
     invisible([vidC, vYvo]);
+    pauseVid([vidC, vYvo]);
     iNetwork(nYvo);
     iNetwork(nYve);
     iNetwork(nC);
@@ -54,6 +55,7 @@ function interactiveMap() {
     vYvo.style.display="block";
     invisible([pm, pc, pmarion, pYves, pe]);
     invisible([vm, vidC]);
+    pauseVid([vm, vidC]);
     iNetwork(nMi);
     iNetwork(nYve);
     iNetwork(nC);
@@ -71,6 +73,7 @@ function interactiveMap() {
     pe.style.display="block";
     invisible([pm, pc, pmarion, pYves, pYvon]);
     invisible([vm, vidC, vYvo]);
+    pauseVid([vm, vidC, vYvo]);
     iNetwork(nMi);
     iNetwork(nYve);
     iNetwork(nC);
@@ -89,6 +92,7 @@ function interactiveMap() {
     pYves.style.display="block";
      invisible([pm, pc, pmarion, pe, pYvon]);
      invisible([vm, vidC, vYvo]);
+     pauseVid([vm, vidC, vYvo]);
     iNetwork(nMi);
     iNetwork(nE);
     iNetwork(nC);
@@ -108,6 +112,7 @@ function interactiveMap() {
      pmarion.style.display="block";
     invisible([pc, pYves, pm, pe, pYvon]);
     invisible([vm, vidC, vYvo]);
+    pauseVid([vm, vidC, vYvo]);
     iNetwork(nMi);
     iNetwork(nE);
     iNetwork(nC);
@@ -127,6 +132,7 @@ function interactiveMap() {
     vidC.style.display="block";
      invisible([pm, pYves, pmarion, pe, pYvon]);
      invisible([vm, vYvo]);
+     pauseVid([vm, vYvo]);
       iNetwork(nMi);
     iNetwork(nE);
     iNetwork(nM);
@@ -151,6 +157,12 @@ function invisible (params){
 function iNetwork (params){
   for (var i=0; i<params.length; i++) {
     params[i].style.opacity="0";
+  }
+}
+
+function pauseVid (params) {
+  for (var i=0; i<params.length; i++) {
+    params[i].pause();
   }
 }
 
