@@ -17,6 +17,10 @@ function interactiveMap() {
   var pYves= document.getElementById('PYves');
   var pe= document.getElementById('PErwan');
 
+  var vm = document.getElementById('vidMichel');
+  var vidC = document.getElementById('vidCeline');
+  var vYvo = document.getElementById('vidYvon');
+
   var nMi = document.getElementsByClassName('network Michel');
   var nYvo = document.getElementsByClassName('network Yvon');
   var nYve = document.getElementsByClassName('network Yves');
@@ -28,7 +32,9 @@ function interactiveMap() {
   mx.addEventListener('mouseover', function() {
     document.getElementById("nom").textContent = 'Michel & Xavier';
     pm.style.display="block";
+    vm.style.display="block";
     invisible([pYvon, pc, pmarion, pYves, pe]);
+    invisible([vidC, vYvo]);
     iNetwork(nYvo);
     iNetwork(nYve);
     iNetwork(nC);
@@ -45,7 +51,9 @@ function interactiveMap() {
   yv.addEventListener('mouseover', function() {
     document.getElementById("nom").textContent = 'Yvon & Jean';
     pYvon.style.display="block";
+    vYvo.style.display="block";
     invisible([pm, pc, pmarion, pYves, pe]);
+    invisible([vm, vidC]);
     iNetwork(nMi);
     iNetwork(nYve);
     iNetwork(nC);
@@ -62,6 +70,7 @@ function interactiveMap() {
     document.getElementById("nom").textContent = 'Erwan & Laurence';
     pe.style.display="block";
     invisible([pm, pc, pmarion, pYves, pYvon]);
+    invisible([vm, vidC, vYvo]);
     iNetwork(nMi);
     iNetwork(nYve);
     iNetwork(nC);
@@ -79,6 +88,7 @@ function interactiveMap() {
     document.getElementById("nom").textContent = 'Yves & Veronique';
     pYves.style.display="block";
      invisible([pm, pc, pmarion, pe, pYvon]);
+     invisible([vm, vidC, vYvo]);
     iNetwork(nMi);
     iNetwork(nE);
     iNetwork(nC);
@@ -97,6 +107,7 @@ function interactiveMap() {
     document.getElementById("nom").textContent = 'Marion & Benjamin';
      pmarion.style.display="block";
     invisible([pc, pYves, pm, pe, pYvon]);
+    invisible([vm, vidC, vYvo]);
     iNetwork(nMi);
     iNetwork(nE);
     iNetwork(nC);
@@ -113,7 +124,9 @@ function interactiveMap() {
   vc.addEventListener('mouseover', function() {
     document.getElementById("nom").textContent = 'Vincent & Celine';
     pc.style.display="block";
+    vidC.style.display="block";
      invisible([pm, pYves, pmarion, pe, pYvon]);
+     invisible([vm, vYvo]);
       iNetwork(nMi);
     iNetwork(nE);
     iNetwork(nM);
