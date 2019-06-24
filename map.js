@@ -22,6 +22,7 @@ function interactiveMap() {
   var vYvo = document.getElementById('vidYvon');
   var vidMa = document.getElementById('vidMarion');
   var ve = document.getElementById('vidErwan');
+  var vYves = document.getElementById('vidYves');
 
   var nMi = document.getElementsByClassName('network Michel');
   var nYvo = document.getElementsByClassName('network Yvon');
@@ -36,8 +37,8 @@ function interactiveMap() {
     pm.style.display="block";
     vm.style.display="block";
     invisible([pYvon, pc, pmarion, pYves, pe]);
-    invisible([vidC, vYvo, vidMa, ve]);
-    pauseVid([vidC, vYvo, vidMa, ve]);
+    invisible([vidC, vYvo, vidMa, ve, vYves]);
+    pauseVid([vidC, vYvo, vidMa, ve, vYves]);
     iNetwork(nYvo);
     iNetwork(nYve);
     iNetwork(nC);
@@ -56,8 +57,8 @@ function interactiveMap() {
     pYvon.style.display="block";
     vYvo.style.display="block";
     invisible([pm, pc, pmarion, pYves, pe]);
-    invisible([vm, vidC, vidMa, ve]);
-    pauseVid([vm, vidC, vidMa, ve]);
+    invisible([vm, vidC, vidMa, ve, vYves]);
+    pauseVid([vm, vidC, vidMa, ve, vYves]);
     iNetwork(nMi);
     iNetwork(nYve);
     iNetwork(nC);
@@ -75,8 +76,8 @@ function interactiveMap() {
     pe.style.display="block";
     ve.style.display="block";
     invisible([pm, pc, pmarion, pYves, pYvon]);
-    invisible([vm, vidC, vYvo, vidMa]);
-    pauseVid([vm, vidC, vYvo, vidMa]);
+    invisible([vm, vidC, vYvo, vidMa, vYves]);
+    pauseVid([vm, vidC, vYvo, vidMa, vYves]);
     iNetwork(nMi);
     iNetwork(nYve);
     iNetwork(nC);
@@ -93,6 +94,7 @@ function interactiveMap() {
   yvv.addEventListener('mouseover', function() {
     document.getElementById("nom").textContent = 'Yves & Veronique';
     pYves.style.display="block";
+    vYves.style.display="block";
      invisible([pm, pc, pmarion, pe, pYvon]);
      invisible([vm, vidC, vYvo, vidMa, ve]);
      pauseVid([vm, vidC, vYvo, vidMa, ve]);
@@ -115,8 +117,8 @@ function interactiveMap() {
      pmarion.style.display="block";
      vidMa.style.display="block";
     invisible([pc, pYves, pm, pe, pYvon]);
-    invisible([vm, vidC, vYvo, ve]);
-    pauseVid([vm, vidC, vYvo, ve]);
+    invisible([vm, vidC, vYvo, ve, vYves]);
+    pauseVid([vm, vidC, vYvo, ve, vYves]);
     iNetwork(nMi);
     iNetwork(nE);
     iNetwork(nC);
@@ -135,8 +137,8 @@ function interactiveMap() {
     pc.style.display="block";
     vidC.style.display="block";
      invisible([pm, pYves, pmarion, pe, pYvon]);
-     invisible([vm, vYvo, vidMa, ve]);
-     pauseVid([vm, vYvo, vidMa, ve]);
+     invisible([vm, vYvo, vidMa, ve, vYves]);
+     pauseVid([vm, vYvo, vidMa, ve, vYves]);
       iNetwork(nMi);
     iNetwork(nE);
     iNetwork(nM);
