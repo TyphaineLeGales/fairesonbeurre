@@ -20,6 +20,8 @@ function interactiveMap() {
   var vm = document.getElementById('vidMichel');
   var vidC = document.getElementById('vidCeline');
   var vYvo = document.getElementById('vidYvon');
+  var vidMa = document.getElementById('vidMarion');
+  var ve = document.getElementById('vidErwan');
 
   var nMi = document.getElementsByClassName('network Michel');
   var nYvo = document.getElementsByClassName('network Yvon');
@@ -34,8 +36,8 @@ function interactiveMap() {
     pm.style.display="block";
     vm.style.display="block";
     invisible([pYvon, pc, pmarion, pYves, pe]);
-    invisible([vidC, vYvo]);
-    pauseVid([vidC, vYvo]);
+    invisible([vidC, vYvo, vidMa, ve]);
+    pauseVid([vidC, vYvo, vidMa, ve]);
     iNetwork(nYvo);
     iNetwork(nYve);
     iNetwork(nC);
@@ -54,8 +56,8 @@ function interactiveMap() {
     pYvon.style.display="block";
     vYvo.style.display="block";
     invisible([pm, pc, pmarion, pYves, pe]);
-    invisible([vm, vidC]);
-    pauseVid([vm, vidC]);
+    invisible([vm, vidC, vidMa, ve]);
+    pauseVid([vm, vidC, vidMa, ve]);
     iNetwork(nMi);
     iNetwork(nYve);
     iNetwork(nC);
@@ -71,9 +73,10 @@ function interactiveMap() {
   el.addEventListener('mouseover', function() {
     document.getElementById("nom").textContent = 'Erwan & Laurence';
     pe.style.display="block";
+    ve.style.display="block";
     invisible([pm, pc, pmarion, pYves, pYvon]);
-    invisible([vm, vidC, vYvo]);
-    pauseVid([vm, vidC, vYvo]);
+    invisible([vm, vidC, vYvo, vidMa]);
+    pauseVid([vm, vidC, vYvo, vidMa]);
     iNetwork(nMi);
     iNetwork(nYve);
     iNetwork(nC);
@@ -91,8 +94,8 @@ function interactiveMap() {
     document.getElementById("nom").textContent = 'Yves & Veronique';
     pYves.style.display="block";
      invisible([pm, pc, pmarion, pe, pYvon]);
-     invisible([vm, vidC, vYvo]);
-     pauseVid([vm, vidC, vYvo]);
+     invisible([vm, vidC, vYvo, vidMa, ve]);
+     pauseVid([vm, vidC, vYvo, vidMa, ve]);
     iNetwork(nMi);
     iNetwork(nE);
     iNetwork(nC);
@@ -110,9 +113,10 @@ function interactiveMap() {
   mb.addEventListener('mouseover', function() {
     document.getElementById("nom").textContent = 'Marion & Benjamin';
      pmarion.style.display="block";
+     vidMa.style.display="block";
     invisible([pc, pYves, pm, pe, pYvon]);
-    invisible([vm, vidC, vYvo]);
-    pauseVid([vm, vidC, vYvo]);
+    invisible([vm, vidC, vYvo, ve]);
+    pauseVid([vm, vidC, vYvo, ve]);
     iNetwork(nMi);
     iNetwork(nE);
     iNetwork(nC);
@@ -131,8 +135,8 @@ function interactiveMap() {
     pc.style.display="block";
     vidC.style.display="block";
      invisible([pm, pYves, pmarion, pe, pYvon]);
-     invisible([vm, vYvo]);
-     pauseVid([vm, vYvo]);
+     invisible([vm, vYvo, vidMa, ve]);
+     pauseVid([vm, vYvo, vidMa, ve]);
       iNetwork(nMi);
     iNetwork(nE);
     iNetwork(nM);
